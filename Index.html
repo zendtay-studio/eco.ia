@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Eco IA • Artificial intelligence</title>
+      <link rel="icon" href="https://zendtay-studio.neocities.org/eco.ia/icon.png" type="image/png">
+      <meta name="description" content="Explore the future with Eco AI, the intelligent platform designed to simplify your life.">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <style>
+         body, html {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+         height: 100%;
+         background-color: var(--background-light);
+         color: var(--text-light);
+         transition: background-color 0.3s, color 0.3s;
+         }
+         :root {
+         --background-light: #f6f9ff;
+         --background-dark: #1f2024;
+         --text-light: #333;
+         --text-dark: #fff;
+         --message-light: #e1eaf3;
+         --message-dark: #252c32;
+         --border-light: #e0e0e0;
+         --border-dark: #333;
+         --user-message-light: #d1ecf1;
+         --user-message-dark: #0d6efd;
+         }
+         .icon {
+         font-size: 55px; /* Tamaño del ícono */
+         color: var(--border-light);
+         }
+         .icon2 {
+         font-size: 19px; /* Tamaño del ícono */
+         color: var(--border-light);
+         }
+         .logo {
+         border-radius: 10px;
+         }
+         .information {
+         margin-top: 30px;
+         padding: 30px;
+         background: var(--message-light);
+         border-radius: 30px;
+         transition: background-color 0.3s ease;
+         }
+         .scroll-view {
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-bottom: 10px;
+         }
+         .app-logo3 {
+         width: 200px;
+         display: block;
+         margin: 0 auto;
+         }
+         .play-store {
+         width: 200px;
+         display: block;
+         margin: 0 auto;
+         }
+         .support-button {
+         width: 180px;
+         height: 40px;
+         padding: 8px;
+         background-color: var(--message-light);
+         text-align: center;
+         margin: 20px auto;
+         border-radius: 15px;
+         color: var(--border-dark);
+         font-size: 18px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-decoration: none;
+         animation: parpadeo 3s ease-in-out infinite;
+         }
+         .slider {
+         position: relative;
+         width: 250px;
+         max-width: 600px; /* Ajusta el tamaño según tus necesidades */
+         margin: auto;
+         overflow: hidden;
+         }
+         .slides {
+         display: flex;
+         transition: transform 0.5s ease-in-out;
+         }
+         .slides img {
+         width: 100%;
+         height: auto;
+         display: block;
+         }
+         .user-count2 {
+         color: var(--border-dark);
+         text-align: center;
+         margin: 20px;
+         font-size: 20px;
+         font-family: 'Roboto', sans-serif;
+         font-weight: 700;
+         }
+      </style>
+   <body>
+      <br>
+      <br>
+      <div id="linear1">
+      <div class="scroll-view">
+         <div class="slider">
+            <div class="slides">
+               <img src="img/phone_1png" alt="Eco IA" class="app-logo3">
+               <img src="img/phone_2.png" alt="Eco IA" class="app-logo3">
+               <img src="img/phone_3.png" alt="Eco IA" class="app-logo3">
+            </div>
+         </div>
+         <br>
+         <p class="user-count2"><strong>Explora el futuro con Eco AI, la plataforma inteligente diseñada para simplificar tu vida.</strong></p>
+         <a href="https://zendtay-studio.github.io./eco.ia/chat/" class="support-button"><strong>Iniciar chat</strong></a>
+         <a href="https://play.google.com/store/apps/details?id=com.eco.ia.zty" target="_blank">
+         <img src="img/google_play_store.png" 
+            alt="Eco IA" 
+            class="play-store">
+         </a>
+         <p style="font-family: Arial, sans-serif; font-size: 14px; text-align: center; padding: 5px 20px 0px 20px;">Al utilizar Eco IA, usted acepta los 
+            <a href="https://zendtay-studio.github.io/eco.ia/terms" target="_blank" style="color: #007bff; text-decoration: none;">Términos</a> 
+            y la 
+            <a href="https://zendtay-studio.github.io/eco.ia/privacy" target="_blank" style="color: #007bff; text-decoration: none;">Política de privacidad</a>.
+         </p>
+      </div>
+      <script>
+         let index = 0;
+         const slides = document.querySelector('.slides');
+         const images = slides.querySelectorAll('img');
+         const totalImages = images.length;
+         let startX;
+         
+         function showSlide(n) {
+             if (n >= totalImages) {
+                 index = 0;
+             } else if (n < 0) {
+                 index = totalImages - 1;
+             } else {
+                 index = n;
+             }
+             const offset = -index * 100;
+             slides.style.transform = `translateX(${offset}%)`;
+         }
+         
+         function handleTouchStart(event) {
+             startX = event.touches[0].clientX;
+         }
+         
+         function handleTouchEnd(event) {
+             const endX = event.changedTouches[0].clientX;
+             const deltaX = endX - startX;
+         
+             if (deltaX > 50) {
+                 showSlide(index - 1); // Deslizar a la izquierda
+             } else if (deltaX < -50) {
+                 showSlide(index + 1); // Deslizar a la derecha
+             }
+         }
+         
+         setInterval(() => {
+             showSlide(index + 1);
+         }, 4000); // Cambia la imagen cada 3 segundos
+         
+         slides.addEventListener('touchstart', handleTouchStart);
+         slides.addEventListener('touchend', handleTouchEnd);
+      </script>
+   </body>
+</html>
