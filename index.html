@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Eco IA • Artificial intelligence</title>
       <link rel="icon" href="https://zendtay-studio.neocities.org/eco.ia/icon.png" type="image/png">
-      <meta name="description" content="Explore the future with Eco AI, the intelligent platform designed to simplify your life.">
+      <meta name="description" content="Eco IA is an artificial intelligence designed to generate text securely and reliably. Its main goal is to protect user privacy, as it does not track, store, or share the conversations generated.">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
          margin: 0 auto;
          }
          .support-button {
-         width: 180px;
+         width: 220px;
          height: 40px;
          padding: 8px;
          background-color: var(--message-light);
@@ -109,14 +109,14 @@
          color: var(--border-dark);
          text-align: center;
          margin: 20px;
-         font-size: 20px;
+         font-size: 15px;
          font-family: 'Roboto', sans-serif;
          font-weight: 700;
          }
          .user-count3 {
      	align-items: center;
          color: var(--border-dark);
-         font-size: 20px;
+         font-size: 22px;
          font-family: 'Roboto', sans-serif;
          }
          header {
@@ -131,10 +131,17 @@
          display: flex;
          }
          .logo img {
-     	width: 50px;
-         height: 50px;
+     	width: 48px;
+         height: 48px;
          margin: 10px;
          border-radius: 10px;
+         }
+         .information {
+         margin-top: 30px;
+         padding: 0px;
+         background: var(--message-light);
+         border-radius: 30px;
+         transition: background-color 0.3s ease;
          }
       </style>
    <body>
@@ -142,10 +149,12 @@
             <div class="logo">
                <img src="img/icon_eco_ia.png" alt="Eco IA">
                <div>
+               	<p class="user-count3"><strong>ZendTay Studio</strong></p>
          </header>
-      <br>
       <div id="linear1">
       <div class="scroll-view">
+      	<div class="information">
+      	<p class="user-count1"><strong>Eco IA</strong></p>
          <div class="slider">
             <div class="slides">
                <img src="img/phone_1.png" alt="Eco IA" class="app-logo3">
@@ -153,9 +162,9 @@
             </div>
          </div>
          <br>
-     	<p class="user-count1"><strong>Eco IA</strong></p>
-         <p class="user-count2"><strong>Explora el futuro con Eco AI, la plataforma inteligente diseñada para simplificar tu vida.</strong></p>
-         <a href="https://zendtay-studio.github.io./eco.ia/chat/" class="support-button"><strong>Iniciar chat</strong></a>
+         <p class="user-count2"><strong>Eco IA es una inteligencia artificial diseñada para generar texto de manera segura y confiable. Su principal objetivo es proteger la privacidad de los usuarios, ya que no rastrea, almacena ni comparte las conversaciones generadas.</strong></p>
+         </div>
+         <a href="https://zendtay-studio.github.io./eco.ia/chat/" class="support-button"><strong>Hablar con Eco IA</strong></a>
          <a href="https://play.google.com/store/apps/details?id=com.eco.ia.zty" target="_blank">
          <img src="img/google_play_store.png" 
             alt="Eco IA" 
@@ -167,7 +176,8 @@
             y la 
             <a href="https://zendtay-studio.github.io/eco.ia/privacy" target="_blank" style="color: #007bff; text-decoration: none;">Política de privacidad</a>.
          </p>
-      </div>
+         <center><p>ZendTay Studio</p><center>
+     </div>
       <script>
          let index = 0;
          const slides = document.querySelector('.slides');
