@@ -1,0 +1,212 @@
+         body, html {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+         height: 100%;
+         background-color: var(--background-light);
+         color: var(--text-light);
+         transition: background-color 0.3s, color 0.3s;
+         }
+         :root {
+         --background-light: #f6f9ff;
+         --background-dark: #1f2024;
+         --text-light: #333;
+         --text-dark: #fff;
+         --message-light: #e1eaf3;
+         --message-dark: #252c32;
+         --border-light: #e0e0e0;
+         --border-dark: #333;
+         --user-message-light: #d1ecf1;
+         --user-message-dark: #0d6efd;
+         }
+         .icon {
+         font-size: 50px;
+         color: solid var(--border-light);
+         }
+         .icon2 {
+         font-size: 50px;
+         color: var(--text-light);
+         }
+         .container {
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+         }
+         header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 8px;
+         background-color: var(--background-light);
+         border-bottom: 1px solid var(--border-light);
+         }
+         header2 {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 8px;
+         background-color: var(--background-light);
+         border-bottom: 0px solid var(--border-light);
+         }
+         .logo {
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         }
+         .logo img {
+         width: 50px;
+         height: 50px;
+         margin: 10px;
+         border-radius: 10px;
+         }
+         header h1 {
+         margin: 0;
+         font-size: 20px;
+         }
+         header p {
+         margin: 0;
+         font-size: 15px;
+         color: #666;
+         }
+         .chat-area {
+         flex-grow: 1;
+         overflow-y: auto;
+         padding: 10px;
+         }
+         .message {
+         margin: 8px 0;
+         padding: 13px;
+         border-radius: 8px;
+         max-width: 90%;
+         word-wrap: break-word;
+         }
+         .user-message {
+         background-color: var(--message-light);
+         color: var(--text-light);
+         text-align: right;
+         margin-left: auto;
+         }
+         .ai-message {
+         background-color: rgba(0, 0, 0, 0.0);
+         color: var(--text-light);
+         border: 1px solid rgba(0, 0, 0, 0.0);
+         }
+         .code-block {
+         position: relative;
+         background-color: #282c34;
+         color: #fff;
+         border-radius: 6px;
+         padding: 12px;
+         margin: 8px 0;
+         overflow-x: auto;
+         }
+         .code-title {
+         font-size: 0.9em;
+         font-weight: bold;
+         color: #aaa;
+         margin-bottom: 8px;
+         }
+         .copy-button {
+         justify-content: center;
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         background-color: var(--background-light);
+         border: 1px solid var(--border-light);
+         color: var(--text-light);
+         border: none;
+         border-radius: 8px;
+         padding: 6px 10px;
+         font-size: 0.8em;
+         cursor: pointer;
+         transition: background-color 0.2s ease;
+         }
+         .copy-button:hover {
+         background-color: var(--message-light);
+         border: 1px solid var(--border-light);
+         }
+         pre {
+         margin: 0;
+         overflow-x: auto;
+         }
+         code {
+         font-family: "Courier New", monospace;
+         font-size: 0.9em;
+         color: #8a8a8a;
+         }
+         #chatMessages {
+         overflow-y: auto;
+         height: 100%;
+         display: flex;
+         padding: 10px;
+         display: flex;
+         flex-direction: column;
+         }
+         .highlight {
+         color: #128C7E;
+         font-weight: bold;
+         }
+         footer {
+         border-top: 0px solid var(--border-light);
+         padding: 5px 18px 15px 18px;
+         height: auto;
+         display: flex;
+         align-items: center;
+         }
+         #chatForm {
+         display: flex;
+         width: 100%;
+         height: 50px;
+         }
+         #userInput {
+         flex-grow: 1; /* Evita que el input crezca automáticamente */
+         padding: 15px; /* Ajusta el espacio interno */
+         background-color: var(--background-light);
+         border: 2px solid var(--border-light);
+         color: var(--text-light);
+         border-radius: 10px;
+         margin-right: 10px;
+         font-size: 18px;
+         height: 60px; /* Define la altura específica */
+         box-sizing: border-box; /* Asegura que padding y border no afecten las dimensiones */
+         }
+         #chatForm button {
+         background-color: var(--message-light);
+         color: var(--text-light);
+         border: none;
+         border-radius: 10px;
+         width: 60px;
+         height: 60px;
+         font-size: 1.2em;
+         cursor: pointer;
+         display: flex; /* Habilita un contenedor flex */
+         align-items: center; /* Centra verticalmente */
+         justify-content: center; /* Centra horizontalmente */
+         }
+         button .spinner {
+         width: 20px;
+         height: 20px;
+         border: 3px solid var(--message-light);
+         border-top: 3px solid var(--text-light);
+         border-radius: 50%;
+         animation: spin 1s linear infinite;
+         margin: auto;
+         }
+         @keyframes spin {
+         0% {
+         transform: rotate(0deg);
+         }
+         100% {
+         transform: rotate(360deg);
+         }
+         }
+         .theme-toggle {
+         margin-left: auto;
+         padding: 10px;
+         cursor: pointer;
+         font-size: 1em;
+         background-color: transparent;
+         border: none;
+         color: var(--text-light);
+         transition: color 0.3s;
+         }
