@@ -37,15 +37,15 @@
          justify-content: space-between;
          align-items: center;
          padding: 8px;
-         background-color: var(--background-light);
-         border-bottom: 1px solid var(--border-light);
+         background-color: var(--message-light);
+         border-bottom: 1px #000000;
          }
          header2 {
          display: flex;
          justify-content: space-between;
          align-items: center;
          padding: 8px;
-         background-color: var(--background-light);
+         background-color: #00000000;
          border-bottom: 0px solid var(--border-light);
          }
          .logo {
@@ -161,7 +161,7 @@
          #userInput {
          flex-grow: 1; /* Evita que el input crezca automáticamente */
          padding: 15px; /* Ajusta el espacio interno */
-         background-color: var(--background-light);
+         background-color: #00000000;
          border: 2px solid var(--border-light);
          color: var(--text-light);
          border-radius: 10px;
